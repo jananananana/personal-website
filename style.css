@@ -212,6 +212,17 @@ body {
 /* Testimonial  */
 .j-testimonial {
     padding: 50px 200px;
+}
+.j-testimonial--with-i {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+}
+.j-testimonial,
+.j-testimonial--with-i {
+    margin-bottom: 20px;
     font-size: 1.5em;
 }
 .j-testimonial__h {
@@ -220,6 +231,9 @@ body {
 }
 .j-testimonial__sig {
     font-weight: 600;
+}
+.j-testimonial__q-c {
+    width: 50%;
 }
 .j-testimonial__q {
     position: relative;
@@ -241,11 +255,26 @@ body {
 .j-testimonial__q:after {
     content: "\201D";
     bottom: -30px;
-    right: 0;
+    right: 20px;
 }
 .j-testimonial__sig-c {
     font-weight: 400;
     font-style: italic;
+}
+.j-testimonial--with-i {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.j-testimonial--image-c {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.j-testimonial--image {
+    width: 100%;
 }
 
 
@@ -357,16 +386,37 @@ body {
     border-top-right-radius: 50%;
     top: -70px;
     right: -25%;
-    height: 70px;
+    height: 400px;
     width: 150%;
     background-color: var(--white-color);
+    z-index: 10;
 }
 
 .j-main--inverse-bump-h {
+    position: relative;
     font-size: 4em;
     text-align: center;
     margin-bottom: 30px;
 }
 .j-main--inverse-bump-content {
-    
+    position: relative;
+    z-index: 20;
+}
+.j-mini {
+    margin: 80px 400px;
+    text-align: center;
+}
+.j-mini__h {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/*********************/
+/*** Footer Styles ***/
+/*********************/
+.j-footer {
+    margin: 0 auto;
+    font-size: 0.8em;
+    text-align: center;
 }
