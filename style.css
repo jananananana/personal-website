@@ -4,14 +4,17 @@
 
 :root {
     --black-color: #000;
+    --dark-teal-color: #23493e;
     --teal-color: #306455;
     --rose-color: #ECDFE2;
     --beige-color: #9D6942;
     --light-gray-color: #f5f5f5;
+    --white-color: #fff;
     --bottom-margin: 20px;
 
     --fancy-font: "Ephesis", cursive;
     --regular-font: "Open Sans", sans-serif;
+    --serif-font: "Cinzel", serif;
 }
 
 body {
@@ -31,13 +34,29 @@ body {
 
 }
 
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
 
 /*********************/
 /*** Component Styles ***/
 /*********************/
 
 .j-heading {
+    font-family: var(--serif-font);
     font-size: 1.6em;
+}
+.j-heading--em {
+    display: block;
+    text-transform: lowercase;
+    font-style: italic;
 }
 
 .j-heading--2 {
@@ -119,7 +138,57 @@ body {
     transform: translate(0,5px);
 }
 .j-cta-button {
+    border-color: var(--beige-color);
+    background-color: var(--teal-color);
+    color: var(--light-gray-color);
+}
+.j-cta-button:hover,
+.j-cta-button:focus {
+    background-color: var(--dark-teal-color);
+    border-color: var(--black-color);
+}
 
+/*********************/
+/*** Email Form Styles ***/
+/*********************/
+
+.j-email-form {
+    
+}
+.j-email-form__input {
+    box-sizing: border-box;
+    padding: 0.8em 1em;
+    width: 100%;
+    line-height: 2;
+}
+.j-email-form__input-container {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;    
+}
+.j-email-form__input-container-floater {
+    display: block;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    font-size: 1.2em;
+    pointer-events: none;
+    transition: all 0.2s;
+
+    font-style: italic;
+}
+.j-email-form__input:focus ~ .j-email-form__input-container-floater,
+.j-email-form__input:not(:focus):valid ~ .j-email-form__input-container-floater {
+    top: -10px;
+    border: 1px solid var(--beige-color);
+    padding: 2px 5px;
+    font-size: 0.7em;
+    background-color: var(--white-color);
+}
+
+
+.j-email-form__submit {
+    width: 100%;
 }
 
 
@@ -149,12 +218,13 @@ body {
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 60% auto;
-    flex: 1;
     height: 100%;
 }
 .j-main--fade {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0) 20%, rgba(157,105,66,0.50) 40%, rgba(157,105,66,0.80) 55%, rgba(157,105,66,1) 60%);
+    
+    color: var(--light-gray-color);
 }
 .j-main__holder {
     display: flex;
@@ -163,7 +233,14 @@ body {
 .j-main__content {
     padding: 40px 20px 40px 0;
     width: 40%;
-    color: var(--light-gray-color);
+}
+.j-main--blush__content {
+    display: grid;
+    grid-template-columns: [col1] 50% [col2] auto [colend];
+    column-gap: 40px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .j-main__text {
     margin: 20px 0;
@@ -187,4 +264,17 @@ body {
     left: 10px;
     font-weight: 900;
     text-shadow: 3px 3px var(--teal-color);
+}
+
+.j-main--blush {
+    background-color: var(--rose-color);
+
+    color: var(--black-color);
+}
+.j-main__image-container {
+    overflow: hidden;
+    border-radius: 50% 50% 10px 10px;
+}
+.j-main__image {
+    width: 100%;
 }
