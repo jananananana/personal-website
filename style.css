@@ -69,7 +69,7 @@ body {
     display: block;
     text-transform: uppercase;
 }
-.j-heading__bottom {
+.j-heading__fancy {
     display: block;
     font-family: var(--fancy-font);
     font-size: 2em;  
@@ -148,13 +148,8 @@ body {
     border-color: var(--black-color);
 }
 
-/*********************/
-/*** Email Form Styles ***/
-/*********************/
 
-.j-email-form {
-    
-}
+/* Email Form Style */
 .j-email-form__input {
     box-sizing: border-box;
     padding: 0.8em 1em;
@@ -185,12 +180,34 @@ body {
     font-size: 0.7em;
     background-color: var(--white-color);
 }
-
-
 .j-email-form__submit {
     width: 100%;
 }
 
+/* Stats  */
+.j-stats {
+    display: grid;
+    grid-template-columns: [col1]250px[col2]2px[col3]250px[col4]2px[col5]250px[colend];
+    gap: 20px;
+    justify-content: center;
+    font-size: 1.2em;
+}
+.j-stats__item {
+
+    justify-self: center;
+    align-self: center;
+
+    padding: 0 30px;
+    text-align: center;
+}
+.j-stats__divider {
+    height: 100%;
+    border-left: 2px solid var(--white-color);
+
+}
+.j-stats__item:last-child:after {
+    content: none;
+}
 
 /*********************/
 /*** Layout Styles ***/
@@ -234,14 +251,6 @@ body {
     padding: 40px 20px 40px 0;
     width: 40%;
 }
-.j-main--blush__content {
-    display: grid;
-    grid-template-columns: [col1] 50% [col2] auto [colend];
-    column-gap: 40px;
-
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 .j-main__text {
     margin: 20px 0;
     font-size: 1.1em;
@@ -268,13 +277,47 @@ body {
 
 .j-main--blush {
     background-color: var(--rose-color);
-
     color: var(--black-color);
+}
+.j-main--blush__content {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.j-main__content-container {
+    padding-right: 50px;
 }
 .j-main__image-container {
     overflow: hidden;
     border-radius: 50% 50% 10px 10px;
+    width: 50%;
 }
 .j-main__image {
     width: 100%;
+}
+/* bottom padding is for j-main--inverse-bump */
+.j-main--inverse {
+    padding: 80px 0 200px 0;
+    background-color: var(--teal-color);
+    color: var(--white-color);
+}
+/* this must be next to j-main--inverse */
+.j-main--inverse-bump {
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+    overflow-x: clip;
+}
+.j-main--inverse-bump:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    top: -180px;
+    right: -25%;
+    height: 200px;
+    width: 150%;
+    background-color: var(--white-color);
 }
