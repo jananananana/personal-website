@@ -6,8 +6,17 @@
     --black-color: #000;
     --teal-color: #306455;
     --rose-color: #ECDFE2;
+    --beige-color: #9D6942;
     --light-gray-color: #f5f5f5;
     --bottom-margin: 20px;
+
+    --fancy-font: "Ephesis", cursive;
+    --regular-font: "Open Sans", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--regular-font);
 }
 
 .j-page {
@@ -26,3 +35,31 @@
 /*********************/
 /*** Component Styles ***/
 /*********************/
+
+.j-heading {
+    
+}
+.j-heading__top {
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+}
+.j-heading__bottom {
+    display: block;
+    font-family: var(--fancy-font);
+    font-size: 2em;
+    
+}
+
+.j-cta-button {
+
+}
+
+
+/*********************/
+/*** Layout Styles ***/
+/*********************/
+
+.j-main-header {
+    display: flex;
+}
