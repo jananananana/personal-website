@@ -25,7 +25,7 @@ body {
 
 .page-container {
     margin: 0 auto;
-    padding: 50px;
+    padding: 10px;
     max-width: 1200px;
     line-height: 1.5;
 
@@ -38,18 +38,22 @@ body {
 
 .j-heading {
     font-size: 1.6em;
-    text-align: center;
 }
+
+.j-heading--2 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
 .j-heading__top {
-    margin: 0 0 -1em 0.8em;
+    margin: 0 0 -1.1em 1.9em;
     display: block;
     text-transform: uppercase;
 }
 .j-heading__bottom {
     display: block;
     font-family: var(--fancy-font);
-    font-size: 2em;
-    
+    font-size: 2em;  
 }
 
 .j-button--plain {
@@ -87,6 +91,33 @@ body {
     border-bottom: 3px solid var(--black-color);
 }
 
+.j-button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1.2em 5em;
+    border: 1px solid var(--teal-color);
+    border-radius: 0.1em;
+    color: var(--black-color);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: none;
+    background-color: var(--light-gray-color);
+    transition: all 0.1s;
+    outline: none;
+}
+.j-button:hover,
+.j-button:focus {
+    background-color: var(--rose-color);
+    border-bottom-color: var(--teal-color);
+}
+.j-button:active {
+    transform: translate(0,5px);
+}
 .j-cta-button {
 
 }
@@ -105,6 +136,8 @@ body {
 .j-nav-item {
     display: inline-block;
     padding: 0 20px;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .j-nav-item:last-child {
@@ -112,6 +145,46 @@ body {
 }
 
 .j-main {
+    background-image: url(../images/douglas.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 60% auto;
+    flex: 1;
+    height: 100%;
+}
+.j-main--fade {
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(157,105,66,0.7) 75%, rgba(157,105,66,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 20%, rgba(157,105,66,0.50) 40%, rgba(157,105,66,0.80) 55%, rgba(157,105,66,1) 60%);
+}
+.j-main__holder {
+    display: flex;
+    justify-content: flex-end;
+}
+.j-main__content {
+    padding: 40px 20px 40px 0;
+    width: 40%;
+    color: var(--light-gray-color);
+}
+.j-main__text {
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+.j-main__text--mid {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 2;
+}
+.j-main__item {
+    position: relative;
+    padding-left: 40px;
+    font-size: 1.2em;
+    line-height: 2;
+}
+.j-main__item::before {
+    content: "/";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-weight: 900;
+    text-shadow: 3px 3px var(--teal-color);
 }
