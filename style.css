@@ -37,10 +37,11 @@ body {
 /*********************/
 
 .j-heading {
-    
+    font-size: 1.6em;
+    text-align: center;
 }
 .j-heading__top {
-    margin: 0 auto;
+    margin: 0 0 -1em 0.8em;
     display: block;
     text-transform: uppercase;
 }
@@ -49,6 +50,41 @@ body {
     font-family: var(--fancy-font);
     font-size: 2em;
     
+}
+
+.j-button--plain {
+    position: relative;
+    display: inline;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    color: var(--black-color);
+    text-decoration: none;
+    text-shadow: none;
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    transition: all 0.1s;
+}
+.j-button--plain:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: -10%;
+        width: 120%;
+}
+.j-button--plain:focus,
+.j-button--plain:hover,
+.j-button--plain:active {
+        background: none;
+        box-shadow: none;
+}
+
+.j-button--plain:focus:after,
+.j-button--plain:hover:after,
+.j-button--plain:active:after {
+    border-bottom: 3px solid var(--black-color);
 }
 
 .j-cta-button {
@@ -62,4 +98,20 @@ body {
 
 .j-main-header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.j-nav-item {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.j-nav-item:last-child {
+    padding-right: 0;
+}
+
+.j-main {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(157,105,66,0.7) 75%, rgba(157,105,66,1) 100%);
 }
