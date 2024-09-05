@@ -276,14 +276,17 @@ body {
     height: 400px;
     border-radius: 50%;
 }
-.j-testimonial--image,
-.j-backstory--image {
+.j-testimonial--image {
     width: 100%;
 }
 
 .j-backstory {
     margin-bottom: 20px;
+    padding: 30px 50px;
     font-size: 1.5em;
+}
+.j-backstory--image {
+    height: 100%;
 }
 .j-backstory__p {
     padding: 0 30px;
