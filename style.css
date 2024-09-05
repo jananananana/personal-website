@@ -232,7 +232,8 @@ body {
 .j-testimonial__sig {
     font-weight: 600;
 }
-.j-testimonial__q-c {
+.j-testimonial__q-c,
+.j-backstory__p-c {
     width: 50%;
 }
 .j-testimonial__q {
@@ -261,13 +262,15 @@ body {
     font-weight: 400;
     font-style: italic;
 }
-.j-testimonial--with-i {
+.j-testimonial--with-i,
+.j-backstory--with-i {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 }
-.j-testimonial--image-c {
+.j-testimonial--image-c,
+.j-backstory--image-c {
     overflow: hidden;
     width: 400px;
     height: 400px;
@@ -277,6 +280,17 @@ body {
     width: 100%;
 }
 
+.j-backstory {
+    margin-bottom: 20px;
+    padding: 30px 50px;
+    font-size: 1.5em;
+}
+.j-backstory--image {
+    height: 100%;
+}
+.j-backstory__p {
+    padding: 0 30px;
+}
 
 /*********************/
 /*** Layout Styles ***/
@@ -372,7 +386,8 @@ body {
     color: var(--white-color);
 }
 /* this must be next to j-main--inverse */
-.j-main--inverse-bump {
+.j-main--inverse-bump,
+.j-about {
     margin: 0 auto;
     position: relative;
     background-color: white;
