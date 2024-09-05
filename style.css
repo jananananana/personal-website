@@ -232,7 +232,8 @@ body {
 .j-testimonial__sig {
     font-weight: 600;
 }
-.j-testimonial__q-c {
+.j-testimonial__q-c,
+.j-backstory__p-c {
     width: 50%;
 }
 .j-testimonial__q {
@@ -280,8 +281,12 @@ body {
     width: 100%;
 }
 
+.j-backstory {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
 .j-backstory__p {
-
+    padding: 0 30px;
 }
 
 /*********************/
