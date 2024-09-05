@@ -316,7 +316,7 @@ body {
 }
 
 .j-main {
-    background-image: url(../images/douglas.jpg);
+    background-image: url(./../images/douglas.jpg);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 60% auto;
