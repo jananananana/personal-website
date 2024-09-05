@@ -427,6 +427,31 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+/*********************/
+/*** Dialog Styles ***/
+/*********************/
+.j-dialog {
+    padding: 0;
+}
+.j-dialog__header {
+    position: relative;
+    height: 40px;
+}
+.j-dialog__header-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.j-dialog__inner {
+    padding: 0 30px;
+}
+.j-dialog__content {
+    margin: 20px 0;
+}
+.j-dialog__footer {
+    padding: 20px;
+    text-align: center;
+}
 
 
 /*********************/
