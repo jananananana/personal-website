@@ -232,9 +232,11 @@ body {
 .j-testimonial__sig {
     font-weight: 600;
 }
-.j-testimonial__q-c,
-.j-backstory__p-c {
+.j-testimonial__q-c {
     width: 50%;
+}
+.j-backstory__p-c {
+    width: 60%;
 }
 .j-testimonial__q {
     position: relative;
@@ -289,7 +291,7 @@ body {
     height: 100%;
 }
 .j-backstory__p {
-    padding: 0 30px;
+    padding: 0 30px 20px;
 }
 
 /*********************/
