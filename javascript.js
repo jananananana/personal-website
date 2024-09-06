@@ -23,10 +23,11 @@
         }
 
         // dialog opening and closing logic
-        const _toggleDialog = () => {
-            const dialog = document.getElementById('vaultDialog');
+        const _toggleDialog = (paragraph) => {
+            const dialog = document.getElementById('emailDialog');
 
             if(dialog.open) {
+                paragraph.innerHTML = "";
                 dialog.close();
             } else {
                 dialog.showModal();
@@ -47,28 +48,10 @@
 
         const _putMessageInTemplate = (message) => {
             const message1 = message,
-                  template = `
-                    <template>
-                        <dialog class="j-dialog">
-                            <form method="dialog">
-                                <header class="j-dialog__header">
-                                    <button aria-label="close" class="j-simple-button j-dialog__header-close" formnovalidate>&times;</button>
-                                </header>
-                                <section class="j-dialog__inner">
-                                    <!-- autofocus attribute added for accessibility -->
-                                    <h2 class="j-heading j-heading--2" autofocus>You're One Step Closer to Doodletown</h2>
-                                    <p class="j-dialog__content ">${message1}</p>
-                                </section>
-                                <footer class="j-dialog__footer j-dialog__inner">
-                                        <button  class="j-button" aria-label="close" formnovalidate>Ok!</button>
-                                </footer>
-                            </form>
-                        </dialog>
-                    </template>
-                    `;
+                    paragraph = document.getElementById('dialog-message');
             
-            document.getElementById('body').append(fullcode);
-
+            paragraph.append(message1);
+            _toggleDialog(paragraph);
         }
 
         const _init = () => {
