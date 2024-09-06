@@ -22,10 +22,6 @@ body {
     font-family: var(--regular-font);
 }
 
-.j-page {
-
-}
-
 .page-container {
     margin: 0 auto;
     padding: 10px;
@@ -148,6 +144,12 @@ body {
     border-color: var(--black-color);
 }
 
+.j-simple-button {
+    appearance: none;
+    border: none;
+    font-size: 1.4rem;
+    background-color: inherit;
+}
 
 /* Email Form Style */
 .j-email-form__input {
