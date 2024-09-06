@@ -62,9 +62,9 @@
                                 Product Management
                             </li>
                         </ul>
-                        <button class="j-button">
+                        <a href="mailto:douglas@doodletown.com" class="j-button">
                             Get in touch
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -184,7 +184,7 @@
     <dialog id="emailDialog" class="j-dialog">
         <form method="dialog">
             <header class="j-dialog__header">
-                <button aria-label="close" class="j-simple-button j-dialog__header-close" formnovalidate>&times;</button>
+                <button id="closeButton" aria-label="close" class="j-simple-button j-dialog__header-close" formnovalidate>&times;</button>
             </header>
             <section class="j-dialog__inner">
                 <!-- autofocus attribute added for accessibility -->
@@ -192,7 +192,7 @@
                 <p id="dialog-message" class="j-dialog__content"></p>
             </section>
             <footer class="j-dialog__footer j-dialog__inner">
-                    <button  class="j-button" aria-label="close" formnovalidate>Ok!</button>
+                <button id="okButton" class="j-button j-cta-button" aria-label="close" formnovalidate>Ok!</button>
             </footer>
         </form>
     </dialog>
