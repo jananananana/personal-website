@@ -14,7 +14,7 @@
 
                 for (let i = 0; i < forms.length; i++) {
                     const form = forms[i];
-                    // I have no idea why the bind works and why it needs a null, but for some reason it works
+                    // I have no idea why the bind works and why it needs a null, but it works
                     form?.addEventListener('submit' , _getEmail.bind(null, form));
                 }
                 // No need for this to bubble up, nothing else needs to use this click
@@ -33,10 +33,13 @@
             }
         }
 
-        const _getEmail = (form, e) => {
-            
-            const formData = new FormData(form)
-            console.log(formData.get("email"));
+        const _getEmail = (form, e) => {   
+            const formData = new FormData(form),
+                    email = formData.get("email"),
+                    message = `Your email ${email} is now subscribed to the exclusive Doodletown newsletter!`;
+
+            _putMessageInTemplate(message);
+
             
             e.preventDefault();
 
