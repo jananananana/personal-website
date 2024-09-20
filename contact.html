@@ -3,13 +3,12 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Douglas Doodletown</title>
+    <title>Contact Douglas Doodletown</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-
     <link rel='stylesheet' type='text/css' media='screen' href='reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='javascript.js'></script>
@@ -36,45 +35,28 @@
 
 
         <!-- Main Area -->
-
-        <section class="j-about">
-            <div class="page-container">
-                <h2 class="j-heading__fancy j-main--inverse-bump-h">
-                    our story
-                </h2>
-                <div class="j-main--blush j-backstory">
-                    <h3 class="j-heading j-testimonial__h">how we began</h3>
-                    <p  class="j-backstory__p">
-                        Founded in 2017, Doodletown LLC was created with a passion for excellence in web development,
-                        a commitment to accessibility, and a drive to help businesses achieve their digital goals.
-                        We specialize in creating custom web solutions that not only look great but are also built to perform—ensuring that every visitor has a seamless experience, regardless of their device or abilities.
-                    </p>
-                </div>
-                <div class="j-main--blush j-backstory ">
-                    <h3 class="j-heading j-testimonial__h">where we are now</h3>
-                    <div class="j-backstory--with-i">
-
-                        <div class="j-backstory--image-c">
-                            <img class="j-backstory--image" src="images/keyboard.jpg" alt="Doughnuts">
-                        </div>
-                        <div class="j-backstory__p-c">
-                            <p class="j-backstory__p">
-                                Today, we proudly serve a diverse range of clients—from startups to global enterprises—providing web solutions that scale with their ambitions.
-                                Whether it’s a Fortune 500 company looking to modernize their digital experience or a small business owner aiming to increase their online visibility, we tailor our services to meet the unique needs of each client.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
     <section class="j-main--plain">
         <div class="page-container">
             <div class="j-mini">
-                <h2 class="j-heading j-heading--2 j-mini__h">
-                    Don't delay, get in touch today
+                <h2 class="j-heading j-heading--3 j-mini__h">
+                    Contact Doodletown With Your Most Haunting Needs
                 </h2>
-                <form class="j-email-form">
+                <form action="success.html" class="">
+                    <label for="firstName" class="sr-only">First Name</label>
+                    <div class="j-email-form__input-container">
+                        <input class="j-email-form__input" id="firstName" autocomplete="firstName" name="firstName" type="text" aria-required="true" required/>
+                        <span class="j-email-form__input-container-floater">Your First Name</span>
+                    </div>
+                    <label for="lastName" class="sr-only">Last Name</label>
+                    <div class="j-email-form__input-container">
+                        <input class="j-email-form__input" id="lastName" autocomplete="lastName" name="lastName" type="text" aria-required="true" required/>
+                        <span class="j-email-form__input-container-floater">Your Last Name</span>
+                    </div>
+                    <label for="needsField" class="sr-only">Tell Us your Needs</label>
+                    <div class="j-email-form__input-container">
+                        <textarea class="j-email-form__input" id="needsField"  name="needsField" type="text" aria-required="true" required></textarea>
+                        <span class="j-email-form__input-container-floater">Tell us your needs</span>
+                    </div>
                     <label for="emailField" class="sr-only">Email</label>
                     <div class="j-email-form__input-container">
                         <input class="j-email-form__input" id="emailField" autocomplete="email" name="email" type="email" aria-required="true" required/>
@@ -87,6 +69,9 @@
             </div>
         </div>
     </section>
+
+
+
     <section class="j-main--inverse">
         <div class="page-container">
             <footer class="j-footer">
